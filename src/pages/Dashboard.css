@@ -1,0 +1,107 @@
+.dashboard-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.dashboard-metrics {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.metric-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.metric-card h3 {
+  margin-bottom: 10px;
+}
+
+.metric-card p,
+.metric-card ul {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Centering the charts */
+.chart-container {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  margin: 20px 0;
+  gap: 20px; /* Space between charts */
+}
+
+/* Adding colorful styles for charts */
+.pie-chart {
+  background-color: #ffffff; /* White background for pie chart */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Padding around the pie chart */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.bar-chart {
+  background-color: #ffffff; /* White background for bar chart */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Padding around the bar chart */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Optional: Adding a colorful header */
+h1 {
+  color: #333; /* Dark gray color for the header */
+}
+
+h2 {
+  color: #555; /* Medium gray color for the subheader */
+}
+
+/* Add a hover effect for the metric cards */
+.metric-card:hover {
+  background-color: #f0f8ff; /* Light blue on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+
+.scheme-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of cards */
+  gap: 15px; /* Space between cards */
+}
+
+.scheme-card {
+  background-color: #e0f7fa; /* Light blue background */
+  border: 1px solid #b2ebf2; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px;
+  width: 150px; /* Fixed width for cards */
+  text-align: center; /* Center text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s; /* Transition for hover effect */
+}
+
+.scheme-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.filtered-scheme-names {
+  margin-top: 20px;
+}
+
+.filtered-scheme-names ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.filtered-scheme-names li {
+  margin: 5px 0; /* Space between list items */
+  background-color: #f4f4f4; /* Optional: Add a background color */
+  padding: 10px; /* Optional: Add padding for better appearance */
+  border-radius: 5px; /* Optional: Rounded corners */
+}

@@ -1,0 +1,79 @@
+Database Name: eyojana
+
+
+
+CREATE TABLE IF NOT EXISTS public.admin
+(
+    admin_id integer NOT NULL DEFAULT nextval('admin_admin_id_seq'::regclass),
+    adminname character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    phone_number character(10) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT admin_pkey PRIMARY KEY (admin_id),
+    CONSTRAINT admin_email_key UNIQUE (email),
+    CONSTRAINT admin_phone_number_check CHECK (phone_number ~ '^[1-9][0-9]{9}$'::text)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.admin
+    OWNER to postgres;
+
+
+CREATE TABLE IF NOT EXISTS public.scheme
+(
+    scheme_id integer NOT NULL DEFAULT nextval('scheme_scheme_id_seq'::regclass),
+    schemename character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    user_id integer NOT NULL,
+    email character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    category character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT scheme_pkey PRIMARY KEY (scheme_id),
+    CONSTRAINT scheme_email_key UNIQUE (email),
+    CONSTRAINT scheme_user_id_fkey FOREIGN KEY (user_id)
+        REFERENCES public.users (user_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.scheme
+    OWNER to postgres;
+
+CREATE TABLE IF NOT EXISTS public.scheme_documents
+(
+    document_id integer NOT NULL DEFAULT nextval('scheme_documents_document_id_seq'::regclass),
+    scheme_id integer NOT NULL,
+    document_name character varying(255) COLLATE pg_catalog."default",
+    document bytea NOT NULL,
+    CONSTRAINT scheme_documents_pkey PRIMARY KEY (document_id),
+    CONSTRAINT scheme_documents_scheme_id_fkey FOREIGN KEY (scheme_id)
+        REFERENCES public.scheme (scheme_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.scheme_documents
+    OWNER to postgres;
+
+CREATE TABLE IF NOT EXISTS public.users
+(
+    user_id integer NOT NULL DEFAULT nextval('users_user_id_seq'::regclass),
+    username character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    phone_number character(10) COLLATE pg_catalog."default" NOT NULL,
+    state character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    gender character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT users_pkey PRIMARY KEY (user_id),
+    CONSTRAINT users_email_key UNIQUE (email),
+    CONSTRAINT users_phone_number_check CHECK (phone_number ~ '^[1-9][0-9]{9}$'::text)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.users
+    OWNER to postgres;

@@ -1,0 +1,83 @@
+.form-container {
+    padding: 30px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+  }
+  
+  .document-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .document-form label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .document-form select,
+  .document-form input[type="file"] {
+    margin-top: 8px;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .document-form select:focus,
+  .document-form input[type="file"]:focus {
+    border-color: #7f9208;
+    box-shadow: 0 0 8px rgba(15, 164, 175, 0.2);
+    outline: none;
+  }
+  
+  .document-form .additional-document-group {
+    margin-bottom: 20px;
+  }
+  
+  .document-form button {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #7f9208;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .document-form button:hover {
+    background-color: #7f9208;
+    transform: translateY(-2px);
+  }
+  
+  .document-form button:active {
+    background-color: #7f9208;
+    transform: translateY(0);
+  }
+  
+  .document-form input[type="file"]::file-selector-button {
+    background-color: #7f9208;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .document-form input[type="file"]::file-selector-button:hover {
+    background-color: #7f9208;
+  }
+  

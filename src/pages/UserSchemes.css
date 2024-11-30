@@ -1,0 +1,99 @@
+/* .user-schemes-container {
+    padding: 20px;
+    background-color: #102f4d;
+  }
+  
+  .schemes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  
+  .scheme-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scheme-card h3 {
+    margin: 0 0 10px 0;
+    color: #964734;
+  }
+   */
+
+   .user-schemes-container {
+    padding: 20px;
+    background-color: #fffffd;
+    color: #1e1a1a;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #3a3202; /* Gold color for the title */
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filter-buttons button {
+    background-color: #8bb80f; /* Gold color */
+    color: #102f4d; /* Dark background color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: #e6b800; /* Darker gold on hover */
+}
+
+.schemes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.scheme-card {
+    background: #fff;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schemedoc{
+    height: 250px;
+
+}
+
+.scheme-card h4 {
+    margin: 0 0 10px 0;
+    color: #964734;
+}
+
+.status-approved {
+    color: green; /* Approved status color */
+}
+
+.status-pending {
+    color: orange; /* Pending status color */
+}
+
+.status-rejected {
+    color: red; /* Rejected status color */
+}
+
+.schemenm {
+    height: 160px;
+}

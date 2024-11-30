@@ -1,0 +1,14 @@
+div .button{
+    width: 162px;
+  background-color: #698406;
+  color: #e2f9eb;
+  border-width: 1px;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+  display: grid;
+  height: 40px;
+  align-content: center;
+  transition: background-color 0.3s ease;
+  margin: 5vh auto;
+}

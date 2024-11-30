@@ -1,0 +1,113 @@
+/* General styling for the signup page */
+.signup-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f8f9fa; /* Lighter grey background for a cleaner look */
+  padding: 0 20px; /* Padding for better mobile experience */
+}
+
+.signup-box {
+  background-color: #ffffff; /* Pure white background for the signup box */
+  padding: 30px 40px; /* Increased padding for more whitespace */
+  border-radius: 12px; /* Slightly larger border-radius for softer edges */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for better depth */
+  max-width: 450px; /* Increased max-width for better readability */
+  width: 100%;
+  text-align: center;
+  padding-top: 150px;
+}
+
+/* Styling for the title */
+h2 {
+  margin-bottom: 25px;
+  font-size: 26px; /* Slightly larger font size */
+  color: #343a40; /* Darker grey for stronger contrast */
+}
+
+/* Styling for input fields */
+.input-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #343a40; /* Darker grey for labels */
+  font-weight: 500; /* Slightly bolder font for labels */
+}
+
+input {
+  width: 100%;
+  padding: 12px; /* Increased padding for better UX */
+  border-radius: 6px; /* Slightly larger border-radius */
+  border: 1px solid #ced4da; /* Light grey border with better contrast */
+  box-sizing: border-box;
+  font-size: 16px; /* Slightly larger font size */
+}
+
+input:focus {
+  border-color: #6a8d09; /* Blue border on focus */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px; /* Increased padding for better UX */
+  border-radius: 6px;
+  border: none;
+  background-color: #6a8d09; /* Blue background */
+  color: white;
+  font-size: 18px; /* Larger font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6a8d09; /* Darker blue on hover */
+}
+
+/* Link styling */
+.login-link {
+  margin-top: 18px; /* Increased margin for more whitespace */
+  font-size: 15px; /* Slightly larger font for links */
+  color: #343a40; /* Darker grey for text */
+}
+
+.login-link a {
+  color: #6a8d09; /* Blue for links */
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* SignUp.css */
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #719118;
+  color: white; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  z-index: 1000; 
+  text-align: center;
+  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
